@@ -234,6 +234,11 @@ document.addEventListener("DOMContentLoaded", () => {
       category: 'hotel', status: 'want', 
       popup: '<b>大江戸温泉物語Premium 加賀まるや</b><br><span style="color:#ff4d4f;">直通往復バスで意外と近そう</span><br><a href="https://www.ooedoonsen.jp/kagamaruya/" target="_blank">▶ 公式ホームページ</a>' 
     },
+    { 
+      lat: 34.79807765578565, lng: 135.25105887734713, 
+      category: 'hotel', status: 'want', 
+      popup: '<b>有馬きらり</b><br><span style="color:#ff4d4f;">豊臣秀吉も愛した日本三古湯の一つでくつろぎたい</span><br><a href="https://www.arima-view.com/" target="_blank">▶ 公式ホームページ</a>' 
+    },
     /////// グルメ（gourmet）///////
     ////大阪旅行////
      { 
