@@ -211,7 +211,11 @@ document.addEventListener("DOMContentLoaded", () => {
       category: 'spot', status: 'want', 
       popup: '<b>やちむんの里</b><br><span style="color:#ff4d4f;">器好きの妻の憧れの地</span><br><a href="https://www.yomitan-kankou.jp/tourist/watch/1611319504/" target="_blank">▶ 参考サイト</a>' 
     },
-
+    { 
+      lat: 39.328301064058884, lng: 141.52887999720116, 
+      category: 'spot', status: 'want', 
+      popup: '<b>遠野市立博物館</b><br><span style="color:#ff4d4f;">民俗学好きの聖地</span><br><a href="https://www.city.tono.iwate.jp/index.cfm/48,25002,166,html" target="_blank">▶ 参考サイト</a>' 
+    },
     { 
       lat: 34.33000989198189, lng: 134.04572668164545, 
       category: 'spot', status: 'visited', 
