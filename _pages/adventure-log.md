@@ -63,8 +63,8 @@ author_profile: true
 // 2026年以降、毎年1月にこちらの数値を書き換えてください
 const adventureData = {
   labels: ['2026', '2027', '2028', '2029', '2030'], // 年ごとのラベル
-  points: [180000,200000, , ],         // 総ポイント数
-  quests: [5,10, , ]                   // クエスト達成数
+  points: [180000, 200000, , ],          // 総ポイント数
+  quests: [5, 10, , ]                    // クエスト達成数
 };
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -154,6 +154,8 @@ document.addEventListener("DOMContentLoaded", function() {
           type: 'linear',
           display: true,
           position: 'left',
+          suggestedMin: 0,
+          suggestedMax: 1000000, // ★ポイントの最大値に合わせて上限を設定
           title: {
             display: true,
             text: 'ポイント (P)',
@@ -171,6 +173,8 @@ document.addEventListener("DOMContentLoaded", function() {
           type: 'linear',
           display: true,
           position: 'right',
+          suggestedMin: 0,
+          suggestedMax: 50,     // ★クエスト数の最大値に合わせて上限を設定
           title: {
             display: true,
             text: 'クエスト数 (件)',
