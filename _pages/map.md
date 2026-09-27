@@ -291,6 +291,16 @@ document.addEventListener("DOMContentLoaded", () => {
        category: 'gourmet', status: 'visited', 
        popup: '<b>さかな屋くにちゃん</b><br><span style="color:#52c41a;">とんぼマグロのてこね寿司</span>' 
     },
+  　{ 
+       lat: 34.48753748116291, lng: 136.8437741835035,
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>漁師直営店浜幸</b><br><span style="color:#52c41a;">漁師さん直営の新鮮な海鮮丼が絶品！</span><br><a href="https://tabelog.com/mie/A2403/A240302/24008096/?msockid=292d4690b08d6ef838a45037b11d6f40" target="_blank">▶ 食べログ</a>' 
+    },
+    { 
+       lat: 34.49447327832972, lng: 136.6985271123398,
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>ぎょうざの美鈴</b><br><span style="color:#52c41a;">餃子はもちろん女将さんの握ったおにぎりがまた食べたい。</span><br><a href="https://www.gyouzanomisuzu.com/" target="_blank">▶ 公式ホームページ</a>' 
+    },
     ////静岡旅行////
     { 
        lat: 34.70586385200359, lng: 137.73413920129764,
