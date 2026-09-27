@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
           display: true,
           position: 'left',
           suggestedMin: 0,
-          suggestedMax: 1000000, // ★ポイントの最大値に合わせて上限を設定
+          suggestedMax: 500000, // ★ポイントの最大値に合わせて上限を設定
           title: {
             display: true,
             text: 'ポイント (P)',
