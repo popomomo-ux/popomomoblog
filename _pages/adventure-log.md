@@ -60,11 +60,11 @@ author_profile: true
 </style>
 
 <script>
-// 2027年以降、毎年1月にこちらの数値を書き換えてください
+// 2026年以降、毎年1月にこちらの数値を書き換えてください
 const adventureData = {
   labels: ['2026', '2027', '2028', '2029', '2030'], // 年ごとのラベル
-  points: [100000, , , ],         // 総ポイント数
-  quests: [5, , , ]                   // クエスト達成数
+  points: [180000,200000, , ],         // 総ポイント数
+  quests: [5,10, , ]                   // クエスト達成数
 };
 
 document.addEventListener("DOMContentLoaded", function() {
