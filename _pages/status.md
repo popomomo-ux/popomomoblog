@@ -31,8 +31,8 @@ author_profile: true
           <li><span>素早さ (AGI):</span> <strong style="flex: 1; text-align: center;">150</strong></li>
         </ul>
 
-        <!-- 6大魔石グリッド -->
-        <h4 class="rpg-section-title"><i class="fas fa-gem"></i> 6大魔石（保有ポイント収蔵庫）</h4>
+        <!-- 7大魔石グリッド -->
+        <h4 class="rpg-section-title"><i class="fas fa-gem"></i> 7大魔石（保有ポイント収蔵庫）</h4>
         <div class="rpg-stone-grid">
           <div class="rpg-stone-card" data-points="41000">
             <div class="stone-icon">💎</div>
@@ -74,6 +74,14 @@ author_profile: true
             <div class="stone-info">
               <div class="stone-name">Microsoftポイント（1/10）</div>
               <div class="stone-value">1,000 Pt</div>
+            </div>
+          </div>
+          </div>
+          <div class="rpg-stone-card" data-points="3000">
+            <div class="stone-icon">🍃</div>
+            <div class="stone-info">
+              <div class="stone-name">WESTERポイント（期限：2028/3）</div>
+              <div class="stone-value">3,000 Pt</div>
             </div>
           </div>
         </div>
