@@ -100,7 +100,7 @@ author_profile: true
           <tr>
             <th><i class="fas fa-box"></i> 所持品</th>
             <td>世帯主の大葉（家庭菜園） <span>(HP回復・栽培中)</span><br>
-            シャトレーゼ会員カード<span>(無料宿泊の可能性が封印されている)</span></td>
+            シャトレーゼ会員カード<span>(無料宿泊の可能性が秘められている)</span></td>
           </tr>
         </table>
       </div>
