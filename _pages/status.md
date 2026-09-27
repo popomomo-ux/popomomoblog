@@ -84,7 +84,7 @@ author_profile: true
               <div class="stone-value">3,000 Pt</div>
             </div>
           </div>
-        </div>
+        
 
         <!-- 装備品セクション -->
         <h4 class="rpg-section-title"><i class="fas fa-shield-alt"></i> 装備品 & アイテム</h4>
