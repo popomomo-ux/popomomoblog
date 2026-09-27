@@ -239,6 +239,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: 'hotel', status: 'want', 
       popup: '<b>有馬きらり</b><br><span style="color:#ff4d4f;">豊臣秀吉も愛した日本三古湯の一つでくつろぎたい</span><br><a href="https://www.arima-view.com/" target="_blank">▶ 公式ホームページ</a>' 
     },
+    
+    { 
+      lat: 34.32484257650405, lng: 136.80540217608586,
+      category: 'hotel', status: 'want', 
+      popup: '<b>都リゾート 志摩 ベイサイドテラス</b><br><span style="color:#ff4d4f;">しまかぜに乗って、地中海の雰囲気を満喫したい</span><br><a href="https://www.miyakohotels.ne.jp/bayside-terrace/" target="_blank">▶ 公式ホームページ</a>' 
+    },
     /////// グルメ（gourmet）///////
     ////大阪旅行////
      { 
