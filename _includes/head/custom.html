@@ -161,7 +161,12 @@
     justify-content: flex-start !important;
     margin-left: 0 !important;
   }
-  
+
+　{% if page.id %}
+  .author__profile {
+    display: none !important;
+  }
+  {% endif %}
 </style>
 
 <script>
