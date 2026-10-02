@@ -10,7 +10,7 @@ author_profile: true
 <div class="ff-category-menu">
   <span class="ff-cmd-label">▼ 探索エリア選択：</span>
   <a href="/adventure-log/" class="ff-cmd-btn active">すべて</a>
-  <a href="/categories/#マイル・ポイント" class="ff-cmd-btn">💎 マイル・ポイント</a>
+  <a href="/categories/#05_その他" class="ff-cmd-btn">その他</a>
   <a href="/categories/#国内旅行" class="ff-cmd-btn">✈️ 国内旅行</a>
 </div>
 
