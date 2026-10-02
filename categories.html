@@ -9,54 +9,60 @@ author_profile: true
 <div class="ff-category-menu">
   <span class="ff-cmd-label">▼ エリア移動：</span>
   {% for category in site.categories %}
-    <a href="#cat-{{ category[0] }}" class="ff-cmd-btn">📁 {{ category[0] }} ({{ category[1].size }})</a>
+    {% assign cat_name = category[0] %}
+    {% assign cat_count = category[1].size %}
+    <a href="#cat-{{ cat_name | slugify }}" class="ff-cmd-btn">📁 {{ cat_name }} ({{ cat_count }})</a>
   {% endfor %}
 </div>
 
-<!-- ▼ カテゴリごとにグループ分けしてホームと同じカードで表示 -->
+<!-- ▼ すべての記事データをベースに、カテゴリごとにカードを表示（画像も確実に取得できます） -->
 {% for category in site.categories %}
-  <div id="cat-{{ category[0] }}" class="ff-category-section">
+  {% assign cat_name = category[0] %}
+  <div id="cat-{{ cat_name | slugify }}" class="ff-category-section">
     <h2 class="ff-category-heading">
-      ▼ 探索エリア：{{ category[0] }}
+      ▼ 探索エリア：{{ cat_name }}
     </h2>
 
     <div class="ff-card-grid">
-      {% for post in category[1] %}
-      <article class="ff-card">
-        {% if post.header.image %}
-        <div class="ff-card-image-wrap">
-          <a href="{{ post.url | relative_url }}">
-            <img src="{{ post.header.image | relative_url }}" alt="{{ post.title }}" class="ff-card-image">
-          </a>
-        </div>
+      <!-- ホーム画面と同じ `site.posts` を使い、このカテゴリに属する記事だけを抽出 -->
+      {% for post in site.posts %}
+        {% if post.categories contains cat_name %}
+        <article class="ff-card">
+          {% if post.header.image %}
+          <div class="ff-card-image-wrap">
+            <a href="{{ post.url | relative_url }}">
+              <img src="{{ post.header.image | relative_url }}" alt="{{ post.title }}" class="ff-card-image">
+            </a>
+          </div>
+          {% endif %}
+
+          <div class="ff-card-body">
+            <div class="ff-card-header">
+              <span class="ff-card-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+              <span class="ff-card-category">📁 {{ cat_name }}</span>
+            </div>
+
+            <h3 class="ff-card-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+
+            <p class="ff-card-excerpt">
+              {% if post.excerpt %}
+                {{ post.excerpt | strip_html | truncate: 40 }}
+              {% else %}
+                {{ post.content | strip_html | truncate: 40 }}
+              {% endif %}
+            </p>
+
+            <div class="ff-card-tags">
+              <span class="ff-tag-label">タグ：</span>
+              {% for tag in post.tags %}
+                <span class="ff-tag">#{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
         {% endif %}
-
-        <div class="ff-card-body">
-          <div class="ff-card-header">
-            <span class="ff-card-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-            <span class="ff-card-category">📁 {{ category[0] }}</span>
-          </div>
-
-          <h3 class="ff-card-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h3>
-
-          <p class="ff-card-excerpt">
-            {% if post.excerpt %}
-              {{ post.excerpt | strip_html | truncate: 40 }}
-            {% else %}
-              {{ post.content | strip_html | truncate: 40 }}
-            {% endif %}
-          </p>
-
-          <div class="ff-card-tags">
-            <span class="ff-tag-label">タグ：</span>
-            {% for tag in post.tags %}
-              <span class="ff-tag">#{{ tag }}</span>
-            {% endfor %}
-          </div>
-        </div>
-      </article>
       {% endfor %}
     </div>
   </div>
