@@ -67,12 +67,33 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   }
 
-  /* --- 4. レトロRPG風プロフィールリンク --- */
+  /* --- 4. レトロRPG風：author全体を囲むウィンドウ（カード）スタイル --- */
+  .sidebar .author__profile {
+    background-color: #11081f !important; /* FFっぽい深い紫色交じりの黒 */
+    border: 2px solid #ffffff !important;
+    box-shadow: 4px 4px 0px #000000, inset 0 0 10px rgba(255, 255, 255, 0.05) !important;
+    padding: 16px !important;
+    border-radius: 4px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 作者名のカラー（FF風ゴールド） */
+  .sidebar .author__name {
+    color: #ffdd00 !important;
+    text-shadow: 1px 1px 0px #000000 !important;
+  }
+
+  /* 自己紹介文のカラー */
+  .sidebar .author__bio {
+    color: #cccccc !important;
+  }
+
+  /* レトロRPG風のリンク（メニュー） */
   .author__urls li a {
     display: flex;
     align-items: center;
-    background-color: #111111;
-    border: 2px solid #333333;
+    background-color: #1a0f2e !important;
+    border: 2px solid #442266 !important;
     color: #dddddd !important;
     padding: 8px 12px;
     margin-bottom: 8px;
@@ -83,8 +104,8 @@
   }
 
   .author__urls li a:hover {
-    background-color: #1a1a1a;
-    border-color: #ffcc00;
+    background-color: #2a154a !important;
+    border-color: #ffcc00 !important;
     color: #ffffff !important;
   }
 
@@ -139,35 +160,21 @@
   }
 
   /* --- Author（プロフィール）全体の左寄せ・余白調整 --- */
-
-  /* 1. サイドバー全体の左側パディングを詰めて左端に寄せる場合 */
   .sidebar {
     padding-left: 0 !important;
   }
-
-  /* 2. プロフィール内のテキスト（名前やバイオなど）を左揃えにする */
   .sidebar .author__content {
     text-align: left !important;
     padding-left: 0 !important;
   }
-
-  /* 3. レトロRPG風のリンク（メニュー）の配置を左側に詰める */
   .sidebar .author__urls {
     text-align: left !important;
     padding-left: 0 !important;
   }
-
   .sidebar .author__urls li a {
     justify-content: flex-start !important;
     margin-left: 0 !important;
   }
-
-/* ▼ 個別記事ページでのみ、作者プロフィールを非表示にしてメニューを残す ▼ */
-  {% if page.date %}
-  .sidebar .author__profile {
-    display: none !important;
-  }
-  {% endif %}
 </style>
 
 <script>
@@ -234,7 +241,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
   changeFollowToMenu();
-  // 読み込みタイミングのずれ対策
   setTimeout(changeFollowToMenu, 100);
 });
 </script>
