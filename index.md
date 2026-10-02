@@ -115,7 +115,7 @@ author_profile: true
 }
 .ff-card-image {
   width: 100%;
-  height: 70%;
+  height: 50%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
