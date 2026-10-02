@@ -35,7 +35,7 @@ author:
     - label: "セーブポイント<br>(クエストとポイント推移)"
       icon: "fas fa-church"
       url: "/popomomoblog/adventure-log/"
-    - label: "カテゴリー一覧"
+    - label: "ぼうけんの書庫<br>(カテゴリー一覧)"
       icon: "fas fa-fw fa-folder-open"
       url: "/popomomoblog/categories/"
     - label: "タグ一覧"
