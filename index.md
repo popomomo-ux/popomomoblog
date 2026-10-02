@@ -1,5 +1,6 @@
 ---
-layout: splash
+layout: single
+title: "ホーム"
 permalink: /
 author_profile: true
 ---
