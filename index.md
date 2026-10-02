@@ -48,6 +48,7 @@ author_profile: true
       </p>
 
       <div class="ff-card-tags">
+        <span class="ff-tag-label">タグ：</span>
         {% for tag in post.tags %}
           <span class="ff-tag">#{{ tag }}</span>
         {% endfor %}
@@ -57,13 +58,6 @@ author_profile: true
   {% endfor %}
 </div>
 
-<!-- タグ（属性・ステータス風） -->
-      <div class="ff-card-tags">
-        <span class="ff-tag-label">タグ：</span>
-        {% for tag in post.tags %}
-          <span class="ff-tag">#{{ tag }}</span>
-        {% endfor %}
-      </div>
 
 <style>
 /* スタイルはそのまま適用できます */
