@@ -155,7 +155,7 @@ author_profile: true
 }
 /* ③ 記事の抜粋文（本文の要約） */
 .ff-card-excerpt {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   color: #aaaaaa;
   margin: 10px 0;
   line-height: 1.5;
