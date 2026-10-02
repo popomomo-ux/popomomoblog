@@ -5,9 +5,7 @@ permalink: /
 author_profile: true
 ---
 
-<!-- ▼ ここから下に、先ほどのレトロRPG風カード一覧のコードを配置します -->
-
-<!-- 冒険のエリア（カテゴリー）選択コマンド -->
+<!-- ▼ 冒険のエリア（カテゴリー）選択コマンド -->
 <div class="ff-category-menu">
   <span class="ff-cmd-label">▼ 探索エリア選択：</span>
   <a href="/adventure-log/" class="ff-cmd-btn active">すべて</a>
@@ -60,7 +58,10 @@ author_profile: true
 
 
 <style>
-/* スタイルはそのまま適用できます */
+/* ==========================================
+   レトロRPG風 カード型レイアウトスタイル
+   ========================================== */
+
 .ff-category-menu {
   margin-bottom: 25px;
   font-family: 'Courier New', Courier, Monaco, monospace;
@@ -87,11 +88,15 @@ author_profile: true
   color: #ffdd00;
   border-color: #ffdd00;
 }
+
+/* グリッドレイアウト */
 .ff-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
+
+/* カード本体 */
 .ff-card {
   background-color: #0b0b0b;
   border: 2px solid #ffffff;
@@ -103,76 +108,92 @@ author_profile: true
   border-radius: 2px;
   overflow: hidden;
 }
-/* ① カード全体の内部の余白（padding）を狭くして縦幅を短くする */
-.ff-card-body {
-  padding: 8px 10px !important; /* 上下を狭くする */
-}
 .ff-card:hover {
   border-color: #ffdd00;
   transform: translateY(-3px);
 }
-/* ② 画像エリアの高さを調整する */
+
+/* 画像エリア（縦幅を短くするため 130px に調整） */
 .ff-card-image-wrap {
   width: 100%;
-  height: 160px;
+  height: 130px; 
   overflow: hidden;
   border-bottom: 1px solid #333;
+  background-color: #0b0b0b; /* 写真の隙間を埋める漆黒の背景 */
 }
+
+/* 写真をすべて表示（端が切れないように contain を指定） */
 .ff-card-image {
   width: 100%;
-  height: 160%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; 
   transition: transform 0.3s ease;
 }
 .ff-card:hover .ff-card-image {
   transform: scale(1.05);
 }
+
+/* カード内部の余白を詰めて縦幅をコンパクトにする */
 .ff-card-body {
-  padding: 15px;
+  padding: 10px 12px !important;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
 }
-/* ① 日付やカテゴリ名 */
+
+/* 日付やカテゴリ名ヘッダー */
 .ff-card-header {
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
   color: #888;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   border-bottom: 1px dashed #333;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 .ff-card-category {
   color: #00ffcc;
 }
-/* ② 記事のタイトル */
+
+/* 記事のタイトル */
+.ff-card-title {
+  margin: 4px 0;
+}
 .ff-card-title a {
   color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.3;
   font-weight: bold;
 }
 .ff-card-title a:hover {
   color: #ffdd00;
 }
-/* ③ 記事の抜粋文（本文の要約） */
+
+/* 記事の抜粋文 */
 .ff-card-excerpt {
-  font-size: 0.8rem !important;
+  font-size: 0.78rem !important;
   color: #aaaaaa;
-  margin: 10px 0;
-  line-height: 1.5;
+  margin: 6px 0;
+  line-height: 1.4;
   flex-grow: 1;
 }
+
+/* タグエリア */
 .ff-card-tags {
   display: flex;
-  gap: 6px;
+  gap: 5px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  align-items: center;
+  margin-top: 6px;
   border-top: 1px dashed #222;
-  padding-top: 8px;
+  padding-top: 6px;
+}
+.ff-tag-label {
+  font-size: 0.6rem !important;
+  color: #888888;
+  margin-right: 2px;
 }
 .ff-tag {
   font-size: 0.6rem;
@@ -182,11 +203,8 @@ author_profile: true
   padding: 2px 5px;
   border-radius: 2px;
 }
-.ff-tag-label {
-  font-size: 0.6rem !important;
-  color: #888888;
-  margin-right: 2px;
-}
+
+/* スマホ表示対応 */
 @media screen and (max-width: 600px) {
   .ff-card-grid {
     grid-template-columns: 1fr;
