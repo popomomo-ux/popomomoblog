@@ -170,7 +170,7 @@ author_profile: true
   padding-top: 8px;
 }
 .ff-tag {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: #ffcc00;
   background: #151515;
   border: 1px solid #333;
