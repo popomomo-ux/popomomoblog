@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "ホーム"
+title: ""
 permalink: /
 author_profile: true
 ---
@@ -8,7 +8,7 @@ author_profile: true
 <!-- ▼ 冒険のエリア（カテゴリー）選択コマンド -->
 <div class="ff-category-menu">
   <span class="ff-cmd-label">▼ 探索エリア選択：</span>
-  <a href="/adventure-log/" class="ff-cmd-btn active">すべて</a>
+  <a href="/" class="ff-cmd-btn active">すべて</a>
   <a href="/popomomoblog/categories/#その他" class="ff-cmd-btn">その他</a>
   <a href="/popomomoblog/categories/#other" class="ff-cmd-btn">✈️ 国内旅行</a>
 </div>
@@ -17,10 +17,12 @@ author_profile: true
 <div class="ff-card-grid">
   {% for post in site.posts %}
   <article class="ff-card">
-    {% if post.header.image %}
+    <!-- teaser または image の設定を自動で判定して取得 -->
+    {% assign post_image = post.header.teaser | default: post.teaser | default: post.header.image %}
+    {% if post_image %}
     <div class="ff-card-image-wrap">
       <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.header.image | relative_url }}" alt="{{ post.title }}" class="ff-card-image">
+        <img src="{{ post_image | relative_url }}" alt="{{ post.title }}" class="ff-card-image">
       </a>
     </div>
     {% endif %}
@@ -59,7 +61,7 @@ author_profile: true
 
 <style>
 /* ==========================================
-   レトロRPG風 カード型レイアウトスタイル
+   レトロRPG風 ホーム画面・カードスタイル
    ========================================== */
 
 .ff-category-menu {
@@ -113,16 +115,16 @@ author_profile: true
   transform: translateY(-3px);
 }
 
-/* 画像エリア（縦幅を短くするため 130px に調整） */
+/* 画像エリア（縦幅コンパクト・背景黒） */
 .ff-card-image-wrap {
   width: 100%;
   height: 130px; 
   overflow: hidden;
   border-bottom: 1px solid #333;
-  background-color: #0b0b0b; /* 写真の隙間を埋める漆黒の背景 */
+  background-color: #0b0b0b;
 }
 
-/* 写真をすべて表示（端が切れないように contain を指定） */
+/* 写真をすべて表示（切れないように contain 指定） */
 .ff-card-image {
   width: 100%;
   height: 100%;
@@ -133,7 +135,7 @@ author_profile: true
   transform: scale(1.05);
 }
 
-/* カード内部の余白を詰めて縦幅をコンパクトにする */
+/* カード内部の余白を詰めて縦幅を短くする */
 .ff-card-body {
   padding: 10px 12px !important;
   display: flex;
