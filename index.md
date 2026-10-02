@@ -105,7 +105,7 @@ author_profile: true
 }
 /* ① カード全体の内部の余白（padding）を狭くして縦幅を短くする */
 .ff-card-body {
-  padding: 10px 12px !important; /* 上下を狭くする */
+  padding: 8px 10px !important; /* 上下を狭くする */
 }
 .ff-card:hover {
   border-color: #ffdd00;
@@ -114,13 +114,13 @@ author_profile: true
 /* ② 画像エリアの高さを調整する */
 .ff-card-image-wrap {
   width: 100%;
-  height: 100px;
+  height: 160px;
   overflow: hidden;
   border-bottom: 1px solid #333;
 }
 .ff-card-image {
   width: 100%;
-  height: 100%;
+  height: 160%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
