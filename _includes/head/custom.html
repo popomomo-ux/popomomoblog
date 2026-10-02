@@ -67,8 +67,10 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   }
 
-  /* --- 4. レトロRPG風：author全体を囲むウィンドウ（クエストボード共通カラー） --- */
-  .sidebar .author__profile {
+  /* --- 4. レトロRPG風：author全体を囲むウィンドウ（クエストボード共通カラー・高詳細度指定） --- */
+  div.sidebar div.author__profile,
+  .sidebar .author__profile,
+  .author__profile {
     background-color: #15152b !important; /* クエストボードのセクション背景色と統一 */
     border: 2px solid #444466 !important; /* クエストボードの枠線色と統一 */
     box-shadow: 4px 4px 0px #000000 !important;
@@ -77,10 +79,14 @@
     margin-bottom: 20px !important;
     font-family: 'Courier New', Courier, monospace !important;
     color: #f3f3f3 !important;
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* 作者名のカラー（クエストボードのタイトル等と同じゴールド） */
-  .sidebar .author__name {
+  .sidebar .author__name,
+  .author__name {
     color: #ffcc00 !important;
     font-size: 1rem !important;
     font-weight: bold !important;
@@ -89,7 +95,8 @@
   }
 
   /* 自己紹介文のカラー */
-  .sidebar .author__bio {
+  .sidebar .author__bio,
+  .author__bio {
     color: #dddddd !important;
     font-size: 0.85rem !important;
   }
