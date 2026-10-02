@@ -109,7 +109,7 @@ author_profile: true
 }
 .ff-card-image-wrap {
   width: 100%;
-  height: 100px;
+  height: 160px;
   overflow: hidden;
   border-bottom: 1px solid #333;
 }
@@ -176,6 +176,11 @@ author_profile: true
   border: 1px solid #333;
   padding: 2px 5px;
   border-radius: 2px;
+}
+.ff-tag-label {
+  font-size: 0.6rem !important;
+  color: #888888;
+  margin-right: 2px;
 }
 @media screen and (max-width: 600px) {
   .ff-card-grid {
