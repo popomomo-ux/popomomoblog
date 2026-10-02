@@ -15,7 +15,7 @@ author_profile: true
   {% endfor %}
 </div>
 
-<!-- ▼ すべての記事データをベースに、カテゴリごとにカードを表示（画像も確実に取得できます） -->
+<!-- ▼ カテゴリごとにカードを表示（teaser両対応） -->
 {% for category in site.categories %}
   {% assign cat_name = category[0] %}
   <div id="cat-{{ cat_name | slugify }}" class="ff-category-section">
@@ -24,14 +24,15 @@ author_profile: true
     </h2>
 
     <div class="ff-card-grid">
-      <!-- ホーム画面と同じ `site.posts` を使い、このカテゴリに属する記事だけを抽出 -->
       {% for post in site.posts %}
         {% if post.categories contains cat_name %}
         <article class="ff-card">
-          {% if post.header.image %}
+          <!-- teaser または image の設定を自動で判定して取得 -->
+          {% assign post_image = post.header.teaser | default: post.teaser | default: post.header.image %}
+          {% if post_image %}
           <div class="ff-card-image-wrap">
             <a href="{{ post.url | relative_url }}">
-              <img src="{{ post.header.image | relative_url }}" alt="{{ post.title }}" class="ff-card-image">
+              <img src="{{ post_image | relative_url }}" alt="{{ post.title }}" class="ff-card-image">
             </a>
           </div>
           {% endif %}
