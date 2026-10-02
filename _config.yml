@@ -83,3 +83,10 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: "G-1PQ3C1HWM3"
+    
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author_profile: false
