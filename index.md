@@ -41,9 +41,9 @@ author_profile: true
 
       <p class="ff-card-excerpt">
         {% if post.excerpt %}
-          {{ post.excerpt | strip_html | truncate: 70 }}
+          {{ post.excerpt | strip_html | truncate: 40 }}
         {% else %}
-          {{ post.content | strip_html | truncate: 70 }}
+          {{ post.content | strip_html | truncate: 40 }}
         {% endif %}
       </p>
 
@@ -129,6 +129,7 @@ author_profile: true
   flex-grow: 1;
   justify-content: space-between;
 }
+/* ① 日付やカテゴリ名 */
 .ff-card-header {
   display: flex;
   justify-content: space-between;
@@ -141,18 +142,20 @@ author_profile: true
 .ff-card-category {
   color: #00ffcc;
 }
+/* ② 記事のタイトル */
 .ff-card-title a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   font-weight: bold;
 }
 .ff-card-title a:hover {
   color: #ffdd00;
 }
+/* ③ 記事の抜粋文（本文の要約） */
 .ff-card-excerpt {
-  font-size: 0.85rem;
+  font-size: 0.6rem;
   color: #aaaaaa;
   margin: 10px 0;
   line-height: 1.5;
