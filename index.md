@@ -109,13 +109,13 @@ author_profile: true
 }
 .ff-card-image-wrap {
   width: 100%;
-  height: 70px;
+  height: 100px;
   overflow: hidden;
   border-bottom: 1px solid #333;
 }
 .ff-card-image {
   width: 100%;
-  height: 100%;
+  height: 70%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
