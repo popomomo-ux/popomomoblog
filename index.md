@@ -109,7 +109,7 @@ author_profile: true
 }
 .ff-card-image-wrap {
   width: 100%;
-  height: 120px;
+  height: 100px;
   overflow: hidden;
   border-bottom: 1px solid #333;
 }
@@ -146,7 +146,7 @@ author_profile: true
 .ff-card-title a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   font-weight: bold;
 }
@@ -155,7 +155,7 @@ author_profile: true
 }
 /* ③ 記事の抜粋文（本文の要約） */
 .ff-card-excerpt {
-  font-size: 0.5rem;
+  font-size: 0.8rem !important;
   color: #aaaaaa;
   margin: 10px 0;
   line-height: 1.5;
@@ -170,7 +170,7 @@ author_profile: true
   padding-top: 8px;
 }
 .ff-tag {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #ffcc00;
   background: #151515;
   border: 1px solid #333;
