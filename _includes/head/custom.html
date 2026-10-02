@@ -162,8 +162,9 @@
     margin-left: 0 !important;
   }
 
-　{% if page.id %}
-  .author__profile {
+/* ▼ 個別記事ページでのみ、作者プロフィールを非表示にしてメニューを残す ▼ */
+  {% if page.date %}
+  .sidebar .author__profile {
     display: none !important;
   }
   {% endif %}
