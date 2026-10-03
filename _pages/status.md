@@ -152,7 +152,7 @@ author_profile: true
           </tr>
           <tr>
             <th><i class="fas fa-box"></i> 所持品</th>
-            <td>みょうがの芽（家庭菜園） × 3<span>(MP回復・栽培中)</span></td>
+            <td>みょうがの芽(家庭菜園）×3<span>(MP回復・栽培中)</span></td>
           </tr>
         </table>
       </div>
