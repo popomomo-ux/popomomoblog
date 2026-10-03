@@ -35,9 +35,9 @@ author_profile: true
         {% endif %}
       </div>
 
-      <h3 class="ff-card-title">
+      <div class="ff-card-title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h3>
+      </div>
 
 
 
