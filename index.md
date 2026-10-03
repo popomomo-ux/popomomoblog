@@ -39,13 +39,7 @@ author_profile: true
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h3>
 
-      <p class="ff-card-excerpt">
-        {% if post.excerpt %}
-          {{ post.excerpt | strip_html | truncate: 40 }}
-        {% else %}
-          {{ post.content | strip_html | truncate: 40 }}
-        {% endif %}
-      </p>
+
 
       <div class="ff-card-tags">
         <span class="ff-tag-label">タグ：</span>
@@ -173,14 +167,6 @@ author_profile: true
   color: #ffdd00;
 }
 
-/* 記事の抜粋文 */
-.ff-card-excerpt {
-  font-size: 0.78rem !important;
-  color: #aaaaaa;
-  margin: 6px 0;
-  line-height: 1.4;
-  flex-grow: 1;
-}
 
 /* タグエリア */
 .ff-card-tags {
