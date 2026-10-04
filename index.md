@@ -10,6 +10,7 @@ author_profile: true
   <span class="ff-cmd-label">▼ 探索エリア選択：</span>
   <a href="/" class="ff-cmd-btn active">すべて</a>
   <a href="/popomomoblog/categories/#cat-ポイ活" class="ff-cmd-btn">ポイ活</a>  
+  <a href="{{ '/popomomoblog/categories/#cat-' | append: ('ポイ活' | slugify) }}" class="ff-cmd-btn">ポイ活</a>
   <a href="/popomomoblog/categories/#cat-その他" class="ff-cmd-btn">その他</a>
 </div>
 
