@@ -9,8 +9,8 @@ author_profile: true
 <div class="ff-category-menu">
   <span class="ff-cmd-label">▼ 探索エリア選択：</span>
   <a href="/" class="ff-cmd-btn active">すべて</a>
+  <a href="/popomomoblog/categories/#ポイ活" class="ff-cmd-btn">ポイ活</a>  
   <a href="/popomomoblog/categories/#その他" class="ff-cmd-btn">その他</a>
-  <a href="/popomomoblog/categories/#other" class="ff-cmd-btn">✈️ 国内旅行</a>
 </div>
 
 <!-- 記事カードのグリッドコンテナ -->
